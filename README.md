@@ -11,7 +11,7 @@ web companion.
 | Platform | Get it |
 |---|---|
 | **Android** | [Download FemmeFast.apk](https://github.com/pmae8/femme-fast-releases/releases/latest/download/FemmeFast.apk) |
-| **iPhone** | [Download FemmeFast-unsigned.ipa](https://github.com/pmae8/femme-fast-releases/releases/latest/download/FemmeFast-unsigned.ipa) and install with [Sideloadly](https://sideloadly.io/) from a Windows or Mac computer |
+| **iPhone** | [Download FemmeFast-unsigned.ipa](https://github.com/pmae8/femme-fast-releases/releases/latest/download/FemmeFast-unsigned.ipa) and install with [SideStore](https://sidestore.io/) (recommended) or [Sideloadly](https://sideloadly.io/) from a Windows or Mac computer |
 
 These links always point at the newest release, so they never go stale.
 
@@ -26,14 +26,30 @@ version in-app.
 
 ### iPhone install notes
 
-Femme Fast is not on the App Store. It is installed by sideloading:
+Femme Fast is not on the App Store. It is installed by sideloading, and the installer you
+pick decides what works:
 
-1. On a Windows or Mac computer, install [Sideloadly](https://sideloadly.io/).
-2. Download the IPA from the link above.
-3. Connect the iPhone, sign in with your Apple ID in Sideloadly, and install the IPA.
-4. On the phone, trust the developer profile under Settings > General > VPN & Device Management.
+| Installer | App and real alarms | Lock-screen card (Live Activity) | Weekly refresh |
+|---|---|---|---|
+| [SideStore](https://sidestore.io/) (recommended) | yes | yes | on the phone, no computer |
+| [Sideloadly](https://sideloadly.io/) | yes | no - it cannot sign the extension | computer needed |
 
-With a free Apple ID the install expires after 7 days and needs to be re-signed the same way.
+**SideStore**
+
+1. On the iPhone, install LocalDevVPN from the App Store.
+2. On a Windows or Mac computer, install iloader from the SideStore docs and connect the iPhone by cable.
+3. Sign in with your Apple ID in iloader and choose Install SideStore.
+4. On the phone, trust the developer profile under Settings > General > VPN & Device Management, connect LocalDevVPN, open SideStore and sign in.
+5. Download the IPA above in Safari, then in SideStore tap My Apps > + and pick it.
+
+**Sideloadly**
+
+1. Install Sideloadly on a Windows or Mac computer and download the IPA above.
+2. In Advanced Options, untick "Use automatic bundle ID" and keep `com.maevamobile`.
+3. Connect the iPhone, sign in with your Apple ID, and install.
+
+Real pill and fast-end alarms need iOS 26 or newer. With a free Apple ID the install expires
+after 7 days; SideStore refreshes it from the phone, Sideloadly needs the computer again.
 
 ## What is in this repo
 
